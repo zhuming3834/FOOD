@@ -1,0 +1,254 @@
+[
+  {
+    "人群" : [
+      {
+        "image" : "0—1岁.png",
+        "name" : "0—1岁",
+        "type" : "age"
+      },
+      {
+        "image" : "1—3岁.png",
+        "name" : "1—3岁",
+        "type" : "age"
+      },
+      {
+        "image" : "3—6岁.png",
+        "name" : "3—6岁",
+        "type" : "age"
+      },
+      {
+        "image" : "瘦身餐.png",
+        "name" : "瘦身餐",
+        "type" : "age"
+      },
+      {
+        "image" : "美容餐.png",
+        "name" : "美容餐",
+        "type" : "age"
+      },
+      {
+        "image" : "家庭餐.png",
+        "name" : "家庭餐",
+        "type" : "age"
+      },
+      {
+        "image" : "孕期餐.png",
+        "name" : "孕期餐",
+        "type" : "age"
+      },
+      {
+        "image" : "月子餐.png",
+        "name" : "月子餐",
+        "type" : "age"
+      }
+    ],
+    "八大菜系" : [
+      {
+        "image" : "川菜.png",
+        "name" : "川菜",
+        "type" : "category"
+      },
+      {
+        "image" : "湘菜.png",
+        "name" : "湘菜",
+        "type" : "category"
+      },
+      {
+        "image" : "徽菜.png",
+        "name" : "徽菜",
+        "type" : "category"
+      },
+      {
+        "image" : "闽菜.png",
+        "name" : "闽菜",
+        "type" : "category"
+      },
+      {
+        "image" : "粤菜.png",
+        "name" : "粤菜",
+        "type" : "category"
+      },
+      {
+        "image" : "鲁菜.png",
+        "name" : "鲁菜",
+        "type" : "category"
+      },
+      {
+        "image" : "苏菜.png",
+        "name" : "苏菜",
+        "type" : "category"
+      },
+      {
+        "image" : "浙菜.png",
+        "name" : "浙菜",
+        "type" : "category"
+      }
+    ],
+    "功效" : [
+      {
+        "image" : "补气养血.png",
+        "name" : "补气养血",
+        "type" : "keywords"
+      },
+      {
+        "image" : "美容养颜.png",
+        "name" : "美容养颜",
+        "type" : "keywords"
+      },
+      {
+        "image" : "减肥瘦身.png",
+        "name" : "减肥瘦身",
+        "type" : "keywords"
+      },
+      {
+        "image" : "益智补脑.png",
+        "name" : "益智补脑",
+        "type" : "keywords"
+      },
+      {
+        "image" : "清热去火.png",
+        "name" : "清热去火",
+        "type" : "keywords"
+      },
+      {
+        "image" : "健脾开胃.png",
+        "name" : "健脾开胃",
+        "type" : "keywords"
+      },
+      {
+        "image" : "滋阴润燥.png",
+        "name" : "滋阴润燥",
+        "type" : "keywords"
+      },
+      {
+        "image" : "安神助眠.png",
+        "name" : "安神助眠",
+        "type" : "keywords"
+      },
+      {
+        "image" : "三高调养.png",
+        "name" : "三高调养",
+        "type" : "keywords"
+      }
+    ],
+    "点心" : [
+      {
+        "image" : "南瓜饼.png",
+        "name" : "南瓜饼",
+        "type" : "keywords"
+      },
+      {
+        "image" : "饭团.png",
+        "name" : "饭团",
+        "type" : "keywords"
+      },
+      {
+        "image" : "饺子.png",
+        "name" : "饺子",
+        "type" : "keywords"
+      },
+      {
+        "image" : "粽子.png",
+        "name" : "粽子",
+        "type" : "keywords"
+      },
+      {
+        "image" : "月饼.png",
+        "name" : "月饼",
+        "type" : "keywords"
+      },
+      {
+        "image" : "面条.png",
+        "name" : "面条",
+        "type" : "keywords"
+      }
+    ],
+    "类型" : [
+      {
+        "image" : "早餐.png",
+        "name" : "早餐",
+        "type" : "category"
+      },
+      {
+        "image" : "素菜.png",
+        "name" : "素菜",
+        "type" : "category"
+      },
+      {
+        "image" : "荤菜.png",
+        "name" : "荤菜",
+        "type" : "category"
+      },
+      {
+        "image" : "家常菜.png",
+        "name" : "家常菜",
+        "type" : "category"
+      },
+      {
+        "image" : "主食粉面.png",
+        "name" : "主食粉面",
+        "type" : "category"
+      },
+      {
+        "image" : "凉菜.png",
+        "name" : "凉菜",
+        "type" : "category"
+      },
+      {
+        "image" : "特色小吃.png",
+        "name" : "特色小吃",
+        "type" : "category"
+      },
+      {
+        "image" : "西餐.png",
+        "name" : "西餐",
+        "type" : "category"
+      },
+      {
+        "image" : "酱料蘸料.png",
+        "name" : "酱料蘸料",
+        "type" : "category"
+      },
+      {
+        "image" : "烘焙.png",
+        "name" : "烘焙",
+        "type" : "category"
+      },
+      {
+        "image" : "炖菜.png",
+        "name" : "炖菜",
+        "type" : "category"
+      },
+      {
+        "image" : "烤箱.png",
+        "name" : "烤箱",
+        "type" : "category"
+      },
+      {
+        "image" : "微波炉.png",
+        "name" : "微波炉",
+        "type" : "category"
+      },
+      {
+        "image" : "时尚饮品.png",
+        "name" : "时尚饮品",
+        "type" : "category"
+      },
+      {
+        "image" : "食疗药膳.png",
+        "name" : "食疗药膳",
+        "type" : "category"
+      },
+      {
+        "image" : "甜品.png",
+        "name" : "甜品",
+        "type" : "category"
+      },
+      {
+        "image" : "靓汤.png",
+        "name" : "靓汤",
+        "type" : "category"
+      }
+    ]
+  }
+]

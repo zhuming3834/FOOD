@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tco-ZJ-qhI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RSQ-nx-V62">
+            <objects>
+                <navigationController id="Tco-ZJ-qhI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tca-Ma-rUE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46274509803921571" green="0.71764705882352942" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QrL-ja-yKe" kind="relationship" relationship="rootViewController" id="Alx-00-geQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfi-Tb-lDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501" y="-108.99999999999999"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="RBc-E2-Okv">
+            <objects>
+                <tabBarController id="QrL-ja-yKe" customClass="TabBarViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="28V-G6-iwG"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AP3-qi-sBB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gJT-qz-vyn" kind="relationship" relationship="viewControllers" id="L5s-aW-gd8"/>
+                        <segue destination="lx9-EZ-gpx" kind="relationship" relationship="viewControllers" id="E8y-6b-GaD"/>
+                        <segue destination="4sp-60-0ka" kind="relationship" relationship="viewControllers" id="en7-Gn-Pc2"/>
+                        <segue destination="WnQ-CN-8yh" kind="relationship" relationship="viewControllers" id="cLh-lY-2Ea"/>
+                        <segue destination="nWy-cX-Uft" kind="relationship" relationship="viewControllers" id="tWq-Ij-pdi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMk-n7-inb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77" y="-108.99999999999999"/>
+        </scene>
+        <!--健康-->
+        <scene sceneID="Y80-3C-s7n">
+            <objects>
+                <viewController id="WnQ-CN-8yh" customClass="HealthyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bmY-NP-z8E"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5Z-7a-gNH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7D8-FO-63Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="104" title="健康" image="item-yuan.png" id="0p3-XE-Rbt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtY-oo-obC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="203"/>
+        </scene>
+        <!--收藏-->
+        <scene sceneID="M1H-uA-avP">
+            <objects>
+                <viewController id="nWy-cX-Uft" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B9c-f9-caD"/>
+                        <viewControllerLayoutGuide type="bottom" id="B3L-bt-jRl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uTM-v7-q99">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="105" title="收藏" image="item-eat.png" id="ueB-uK-fT8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hig-HA-6II" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="817"/>
+        </scene>
+        <!--分类-->
+        <scene sceneID="Sm3-ul-mb8">
+            <objects>
+                <viewController id="lx9-EZ-gpx" customClass="FoundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4FI-v7-wue"/>
+                        <viewControllerLayoutGuide type="bottom" id="HSG-Ek-f4N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bVU-7L-Tb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="102" title="分类" image="item-cook.png" id="tAw-cH-4EY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nV5-9Z-iPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-1057"/>
+        </scene>
+        <!--专题-->
+        <scene sceneID="Put-8A-XDg">
+            <objects>
+                <viewController id="4sp-60-0ka" customClass="SubjectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aKf-uE-Gdg"/>
+                        <viewControllerLayoutGuide type="bottom" id="chL-Cp-VTe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uff-nd-bF2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="103" title="专题" image="item-topic.png" id="tKg-89-gdF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQn-od-Pdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="-434.99999999999994"/>
+        </scene>
+        <!--推荐-->
+        <scene sceneID="iHX-Hs-0cd">
+            <objects>
+                <viewController id="gJT-qz-vyn" customClass="FoodListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnu-Op-ynV"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFe-lk-oRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ymY-TH-G3u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="101" title="推荐" image="item-me.png" id="9Dq-G2-nfT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvt-Ek-j6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-1682.9999999999998"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="item-cook.png" width="28" height="28"/>
+        <image name="item-eat.png" width="25" height="25"/>
+        <image name="item-me.png" width="28" height="28"/>
+        <image name="item-topic.png" width="28" height="28"/>
+        <image name="item-yuan.png" width="28" height="28"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

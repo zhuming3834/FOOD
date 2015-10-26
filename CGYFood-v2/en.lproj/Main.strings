@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "健康"; ObjectID = "0p3-XE-Rbt"; */
+"0p3-XE-Rbt.title" = "健康";
+
+/* Class = "UITabBarItem"; title = "推荐"; ObjectID = "9Dq-G2-nfT"; */
+"9Dq-G2-nfT.title" = "推荐";
+
+/* Class = "UITabBarItem"; title = "分类"; ObjectID = "tAw-cH-4EY"; */
+"tAw-cH-4EY.title" = "分类";
+
+/* Class = "UITabBarItem"; title = "专题"; ObjectID = "tKg-89-gdF"; */
+"tKg-89-gdF.title" = "专题";
+
+/* Class = "UITabBarItem"; title = "收藏"; ObjectID = "ueB-uK-fT8"; */
+"ueB-uK-fT8.title" = "收藏";

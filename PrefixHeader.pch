@@ -1,0 +1,180 @@
+//
+//  PrefixHeader.pch
+//  CGYFood-v2
+//
+//  Created by qf on 9/12/15.
+//  Copyright (c) 2015 Chakery. All rights reserved.
+//
+
+#ifndef CGYFood_v2_PrefixHeader_pch
+#define CGYFood_v2_PrefixHeader_pch
+
+#define COLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define WIDTH self.view.frame.size.width
+#define HEIGHT self.view.frame.size.height
+
+#define CFBundleDisplayName = @"asdasd"
+
+#import "AFNetworking.h"
+#import "CGYDB.h"
+#import "JHRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "NetWork.h"
+#import "TQRichTextView.h"
+#import "CGYRegex.h"
+#import "SVProgressHUD.h"
+#import "LocalData.h"
+#import "CGYLoading.h"
+#import "ZJModelTool.h"
+
+
+//美食列表API
+#define URL_FOOD_LIST @"http://ibaby.ipadown.com/api/food/food.show.list.php"
+//详情页API
+#define URL_DETAIL @"http://ibaby.ipadown.com/api/food/food.show.detail.php"
+//美食专题
+#define URL_SUBJECT @"http://ibaby.ipadown.com/api/food/food.topic.list.php"
+//专题列表
+#define URL_SUBJECT_LIST @"http://ibaby.ipadown.com/api/food/food.topic.detail.php"
+//健康常识
+#define URL_HEALTHY @"http://ibaby.ipadown.com/api/food/food.tips.category.php"
+//健康常识列表
+#define URL_HEALTHY_LIST @"http://ibaby.ipadown.com/api/food/food.tips.list.php"
+//健康常识详情
+#define URL_HEALTHY_DETAIL @"http://ibaby.ipadown.com/api/food/food.tips.detail.php"
+
+//========================================================================================//
+//数据库名称
+#define DB @"food"
+
+//--------------------------------------数据收藏--------------------------------------//
+//健康常识《表》
+#define TABLE_HEALTHY @"healthy"
+//健康常识《表结构》
+#define TABLE_HEALTHY_ARRAY @[@"ID",@"title",@"content",@"createTime"]
+//美食《表》
+#define TABLE_FOOD @"foodDetail"
+//美食《表结构》
+#define TABLE_FOOD_ARRAY @[@"ID",@"title",@"effect",@"image",@"content",@"createTime"]
+
+//--------------------------------------数据缓存--------------------------------------//
+//美食
+#define TABLE_FOODDATA @"fooddata"
+#define TABLE_FOODDATA_ARRAY @[@"ID",@"age",@"category",@"edittime",@"effect",@"likes",@"thumb",@"thumb_2",@"title",@"views",@"yingyang",@"yuanliao"]
+
+//专题
+#define TABLE_SUBJECT @"subject"
+#define TABLE_SUBJECT_ARRAY @[@"title",@"jianjie",@"thumb",@"views",@"likes",@"ID",@"edittime"]
+//========================================================================================//
+
+
+//navigation标题
+#define NAVIGATION_TITLE(title) UILabel *titleLabel = [[UILabel alloc]init];\
+                titleLabel.frame = CGRectMake(0, 0, 60, 20);\
+                titleLabel.textColor = [UIColor whiteColor];\
+                titleLabel.text = title;\
+                titleLabel.textAlignment = NSTextAlignmentCenter;\
+                self.navigationItem.titleView = titleLabel;
+
+//navigation返回按钮
+#define NAVIGATION_BACK_BUTTON UIButton *button = [[UIButton alloc]init];\
+                button.tintColor = [UIColor whiteColor];\
+                UIImage *image = [[UIImage imageNamed:@"back.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];\
+                button.frame = CGRectMake(0, 0, 35, 35);\
+                [button setImage:image forState:UIControlStateNormal];\
+                [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];\
+                UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc]initWithCustomView:button];\
+                self.navigationItem.leftBarButtonItem = buttonItem;
+
+//返回上一页
+#define NAVIGATION_BACK_BUTTON_CLICK -(void)buttonClick{[self.navigationController popViewControllerAnimated:YES];}
+
+//navigation收藏按钮
+#define NAVIGATION_COLLECTION_BUTTON(rightbutton) rightbutton = [[UIButton alloc]init];\
+                                    UIImage *rightimage = [[UIImage imageNamed:@"star_highlighted.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];\
+                                    rightbutton.frame = CGRectMake(0, 0, 35, 35);\
+                                    [rightbutton setImage:rightimage forState:UIControlStateNormal];\
+                                    [rightbutton addTarget:self action:@selector(collectionButtonClick:) forControlEvents:UIControlEventTouchUpInside];\
+                                    UIBarButtonItem *rightbuttonItem = [[UIBarButtonItem alloc]initWithCustomView:rightbutton];\
+                                    self.navigationItem.rightBarButtonItem = rightbuttonItem;
+
+//navigation清空按钮
+#define NAVIGATION_DELETE_BUTTON(rightbutton) rightbutton = [[UIButton alloc]init];\
+UIImage *rightimage = [[UIImage imageNamed:@"btn-trash.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];\
+rightbutton.frame = CGRectMake(0, 0, 35, 35);\
+[rightbutton setImage:rightimage forState:UIControlStateNormal];\
+[rightbutton addTarget:self action:@selector(deleteButtonClick:) forControlEvents:UIControlEventTouchUpInside];\
+UIBarButtonItem *rightbuttonItem = [[UIBarButtonItem alloc]initWithCustomView:rightbutton];\
+self.navigationItem.rightBarButtonItem = rightbuttonItem;
+
+
+//获取当前时间
+#define TIME_NOW -(NSString *)getTime{\
+                    NSDate *date = [NSDate date];\
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];\
+                    formatter.timeZone = [NSTimeZone systemTimeZone];\
+                    formatter.dateFormat = @"yyyyMMddHHmmss";\
+                    return [formatter stringFromDate:date];\
+                    }\
+
+//网页头部
+#define WEB_HEAD [NSString stringWithFormat:@"<!DOCTYPE html>\
+                        <html>\
+                        <head>\
+                        <meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\
+                        <meta content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;\" name=\"viewport\">\
+                        <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\
+                        <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\" />\
+                        <link href=\"food.css\" rel=\"stylesheet\" type=\"text/css\" />\
+                        <script src=\"jquery-latest.js\" type=\"text/javascript\"></script>\
+                        <script src=\"jquery.lazyload.js\" type=\"text/javascript\"></script>\
+                        </head>\
+                        <script type=\"text/javascript\">\
+                        $(function(){\
+                            $(\"img.lazy\").lazyload({\
+                                effect : \"fadeIn\"\
+                            });\
+                        });\
+                        </script>\
+                        <body>\
+                        <div data-role=\"content\" style='margin:10px;'>"]
+
+//网页尾部
+#define WEB_FOOT @"</body></html>"
+
+//收藏按钮
+#define WEB_COLLECTION @"<div style=\"width:100%;text-align:right;\">\
+<a href=\"bookmark://?selected=0\" id=\"bookmark\" class=\"btnfav r3 mt15 ml10\" style=\"margin:10px 20px 10px 0px!important;\">+收藏</a>\
+</div>"
+
+//标题
+#define WEB_TITLE(title) [NSString stringWithFormat:@"<div style=\"font-size:20px;text-align:center;font-weight:bold;\">%@</div>", title]
+
+//item
+#define ITEM_ARRAY @[\
+@"美容",\
+@"养生保健",\
+@"人群",\
+@"时节",\
+@"餐时",\
+@"器官",\
+@"调养",\
+@"肠胃",\
+@"女",\
+@"常见",\
+@"女",\
+@"女",\
+@"呼吸道",\
+@"血管",\
+@"心脏",\
+@"肝胆",\
+@"神经",\
+@"肌肉",\
+@"皮肤",\
+@"男性",\
+@"癌症"\
+]
+
+#endif
